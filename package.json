@@ -1,0 +1,21 @@
+{
+  "name": "next-static",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "next": "beta",
+    "nextein": "beta",
+    "nprogress": "^0.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-ga": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "nextein -p 4444",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  }
+}
