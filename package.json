@@ -4,16 +4,23 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "classnames": "^2.2.5",
+    "front-matter": "^2.1.2",
     "fs": "^0.0.1-security",
+    "glob": "^7.1.2",
+    "gray-matter": "^3.0.2",
     "next": "beta",
-    "nextein": "beta",
     "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-ga": "^2.2.0"
+    "react-ga": "^2.2.0",
+    "semantic-ui-react": "^0.71.4",
+    "showdown": "^1.7.2",
+    "slug": "^0.9.1"
   },
   "scripts": {
-    "dev": "nextein -p 4444",
+    "dev": "next -p 4444",
     "build": "next build",
     "start": "next start",
     "export": "next build && next export"

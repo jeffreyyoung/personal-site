@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
+import posts from './../.posts/summary.json'
 export default (Wrapped) => {
   return class extends Component {
 		static async getInitialProps(...args) {
@@ -10,17 +11,7 @@ export default (Wrapped) => {
 		}
 		
     render() {
-      return (<div>
-				<Head>
-					<meta charset="utf-8" />
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css"></link>
-				</Head>
-				<Wrapped {...this.props} />
-				<style jsx global>{`
-
-		    `}</style>
-			</div>)
+      return (<Wrapped {...this.props} posts={posts}/>)
     }
   }
 }

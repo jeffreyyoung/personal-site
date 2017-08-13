@@ -1,7 +1,7 @@
 import withAnalytics from './withAnalytics';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-
+import withLayout from './withLayout';
 const setUpProgressBar = () => {
 	Router.onRouteChangeStart = () => NProgress.start();
 	Router.onRouteChangeComplete = () => NProgress.done();
@@ -11,5 +11,5 @@ const setUpProgressBar = () => {
 
 export default (Component) => {
 	setUpProgressBar();
-	return withAnalytics(Component);
+	return withLayout(withAnalytics(Component));
 }
