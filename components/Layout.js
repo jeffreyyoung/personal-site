@@ -36,6 +36,8 @@ export default class Layout extends Component {
 		return (
 			<div>
 				<Hero showHero={this.props.showHero} path={this.props.url.pathname}/>
+				<br />
+				<br />
 				{this.props.children}
 			</div>
 		)

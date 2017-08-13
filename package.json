@@ -23,6 +23,8 @@
     "dev": "next -p 4444",
     "build": "next build",
     "start": "next start",
-    "export": "node generatePostHtml.js && next build && next export"
+    "export": "node generatePostHtml.js && next build && next export",
+		"cp": "rsync -ravpzHogt out/ ./../jeffreyyoung.github.io/",
+		"deploy": "s3-website deploy out"
   }
 }

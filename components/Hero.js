@@ -6,7 +6,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 import Link from 'next/link'
-const gradient = gradients[getRandomInt(0, gradients.length)];
+let gradient = gradients[getRandomInt(0, gradients.length)];
+import {Component} from 'react'
 import {
   Button,
   Container,
@@ -21,7 +22,14 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
-export default (props) => {
+export default class Hero extends Component { 
+	
+	constructor(props, context) {
+		super(props, context);
+	}
+	
+	render(){
+		const props = this.props;
 	let gridStyles = {};
 	if (props.showHero) {
 		gridStyles.minHeight = 500;
@@ -36,9 +44,10 @@ export default (props) => {
 		<Grid style={gridStyles} columns={1}>
 				<Container>
 					<Menu inverted pointing secondary size='large' style={{backgroundColor: 'transparent', borderColor: 'transparent'}}>
-					<Link href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
-					<Link href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
-					<Link href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
+							<Menu.Item header><span className='yar' onClick={() => {gradient = gradients[getRandomInt(0, gradients.length)]; this.forceUpdate()}}>🌮</span></Menu.Item>
+							<Link href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
+							<Link href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
+							<Link href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
 					</Menu>
 				</Container>
 			{props.showHero ? <Grid.Column>
@@ -59,6 +68,9 @@ export default (props) => {
 			</Grid.Column> : null}
 </Grid>
 	<style global jsx>{`
+		.yar:hover {
+			cursor: pointer;
+		}
 		.gradient-stellar {
 			background: #7474BF !important;
 			background: -webkit-linear-gradient(to right, #348AC7, #7474BF) !important;
@@ -114,4 +126,4 @@ export default (props) => {
 		`}</style>
 </Segment>
 	)
-}
+}}

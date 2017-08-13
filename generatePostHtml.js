@@ -35,6 +35,10 @@ function parseFiles(files, filePaths) {
 				data.category = 'post';
 			}
 			
+			if (!data.page) {
+				data.page = 'post'
+			}
+			
 			if (!data.url) {
 				data.url = '/' + slug(data.category).toLowerCase() + '/' + slug(data.title).toLowerCase()
 			}
