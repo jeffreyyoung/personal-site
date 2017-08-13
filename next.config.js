@@ -3,7 +3,8 @@ module.exports = {
   exportPathMap: function () {
     return nextPathMapHelper({
       "/": { page: "/" },
-      "/about": { page: "/about" }
+      "/about": { page: "/about" },
+			"/resume": { page: "/resume" }
     })
   },
 }
