@@ -1,18 +1,7 @@
 import enhancePage from './../hocs/enhancePage';
 import Layout from './../components/Layout';
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,
-} from 'semantic-ui-react'
+import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
+
 export default enhancePage((props) => (
 	<Layout {...props}>
 		<Container>

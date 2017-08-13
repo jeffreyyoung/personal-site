@@ -14,7 +14,7 @@ export default (Wrapped) => {
 				<Head>
 					<meta charset="utf-8" />
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css"></link>
+					<link rel="stylesheet" href="/static/vendor/semantic.min.css"></link>
 				</Head>
 				<Wrapped {...this.props} />
 				<style jsx global>{`

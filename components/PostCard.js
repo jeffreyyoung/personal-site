@@ -1,4 +1,6 @@
-import { Card, Icon, Image } from 'semantic-ui-react'
+import Card from 'semantic-ui-react/dist/commonjs/views/Card'
+import Image from 'semantic-ui-react/dist/commonjs/elements/Image'
+
 import Link from 'next/link'
 
 export default ({post}) => (

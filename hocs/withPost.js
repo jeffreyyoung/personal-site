@@ -11,7 +11,10 @@ export default (Wrapped) => {
 		}
 		
 		render() {
-			return (<Wrapped {...this.props} post={posts[this.props.url.query.postUrl]}/>)
+			console.log(posts);
+			const postKey = this.props.url.query.postUrl || this.props.url.pathname;
+			const post = posts[postKey];
+			return (<Wrapped {...this.props} post={post}/>)
 		}
 	}
 }

@@ -6,45 +6,42 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 import Link from 'next/link'
-let gradient = gradients[getRandomInt(0, gradients.length)];
+let gradient = 'gradient-sea-blizz'
 import {Component} from 'react'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,
-} from 'semantic-ui-react'
+
+import Header from 'semantic-ui-react/dist/commonjs/elements/Header'
+import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
+import Segment from 'semantic-ui-react/dist/commonjs/elements/Segment'
+import Grid from 'semantic-ui-react/dist/commonjs/collections/Grid'
+import Menu from 'semantic-ui-react/dist/commonjs/collections/Menu'
 
 export default class Hero extends Component { 
 	
 	constructor(props, context) {
 		super(props, context);
+		this.state = {
+			gradientHasBeenUpdated: false
+		}
 	}
 	
 	render(){
 		const props = this.props;
-	let gridStyles = {};
-	if (props.showHero) {
-		gridStyles.minHeight = 500;
-	}
+		let gridStyles = {};
+		if (props.showHero) {
+			gridStyles.minHeight = 500;
+		}
+	
 	return (
 		<Segment
 			inverted
 			textAlign='center'
 			vertical
-			className={gradient}
+			className={gradient + ' gradient-transition'}
 		>
 		<Grid style={gridStyles} columns={1}>
 				<Container>
 					<Menu inverted pointing secondary size='large' style={{backgroundColor: 'transparent', borderColor: 'transparent'}}>
-							<Menu.Item header><span className='yar' onClick={() => {gradient = gradients[getRandomInt(0, gradients.length)]; this.forceUpdate()}}>🌮</span></Menu.Item>
+							<Menu.Item header><span className='yar' onClick={() => {gradient = gradients[getRandomInt(0, gradients.length)]; this.setState({gradientHasBeenUpdated:true})}}>🌮</span></Menu.Item>
 							<Link href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
 							<Link href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
 							<Link href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
@@ -70,6 +67,16 @@ export default class Hero extends Component {
 	<style global jsx>{`
 		.yar:hover {
 			cursor: pointer;
+		}
+		
+		.gradient-transition {
+			transition: background 1s ease-in;
+		}
+		.gradient-little-leaf {
+			background: #76b852 !important;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #8DC26F, #76b852) !important;  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #8DC26F, #76b852) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 		}
 		.gradient-stellar {
 			background: #7474BF !important;
@@ -120,7 +127,6 @@ export default class Hero extends Component {
 			background: #5C258D !important;
 			background: -webkit-linear-gradient(to right, #4389A2, #5C258D) !important;
 			background: linear-gradient(to right, #4389A2, #5C258D) !important;
-
 		}
 		
 		`}</style>

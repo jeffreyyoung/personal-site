@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
+import PostCard from './../components/PostCard';
+import Layout from './../components/Layout';
 import withPosts from './../hocs/withPosts';
 import Link from 'next/link'
 import Router from 'next/router'
 import enhancePage from './../hocs/enhancePage';
-import Hero from './../components/Hero';
-import { Container, Grid, Image, Header, Menu, Divider, Visibility } from 'semantic-ui-react'
-import { Card } from 'semantic-ui-react'
-import classNames from 'classnames'
-import PostCard from './../components/PostCard';
-import Layout from './../components/Layout';
+
+import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
+import Grid from 'semantic-ui-react/dist/commonjs/collections/Grid'
+
 export default enhancePage(withPosts(class LandingPage extends Component {
 	constructor(props, context) {
 		super(props, context)
@@ -17,7 +17,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 	
 	render(){
 		const props = this.props;
-		const { posts } = props;
+		const posts = this.props.posts.filter(p => p.data.category === 'projects');
 		return (
 			<Layout showHero={true} {...this.props}>
 				<Container>

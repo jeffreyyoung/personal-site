@@ -6,7 +6,7 @@ var fs = Promise.promisifyAll(require("fs")),
 	glob = require('glob'),
 	showdown  = require('showdown'),
 	converter = new showdown.Converter();
-
+converter.setFlavor('github');
 const generatedFilesDirectory = '.posts';
 
 	// options is optional
