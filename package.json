@@ -23,6 +23,6 @@
     "dev": "next -p 4444",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "node generatePostHtml.js && next build && next export"
   }
 }

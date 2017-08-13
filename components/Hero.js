@@ -5,6 +5,7 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
+import Link from 'next/link'
 const gradient = gradients[getRandomInt(0, gradients.length)];
 import {
   Button,
@@ -21,6 +22,10 @@ import {
 } from 'semantic-ui-react'
 
 export default (props) => {
+	let gridStyles = {};
+	if (props.showHero) {
+		gridStyles.minHeight = 500;
+	}
 	return (
 		<Segment
 			inverted
@@ -28,33 +33,30 @@ export default (props) => {
 			vertical
 			className={gradient}
 		>
-		<Grid style={{minHeight: 500}} columns={1}>
-			<Grid.Column>
+		<Grid style={gridStyles} columns={1}>
 				<Container>
 					<Menu inverted pointing secondary size='large' style={{backgroundColor: 'transparent', borderColor: 'transparent'}}>
-						<Menu.Item as='a' href='/' active>Projects</Menu.Item>
-						<Menu.Item as='a' href='/resume'>Resume</Menu.Item>
-						<Menu.Item as='a' href='/about'>About Me</Menu.Item>
+					<Link href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
+					<Link href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
+					<Link href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
 					</Menu>
 				</Container>
-			</Grid.Column>
-			<Grid.Column>
-		<Container text>
-					<Header
-						as='h1'
-						content='Jeffrey Young'
-						inverted
-						style={{ fontSize: '4em', fontWeight: 'normal', marginTop: '0' }}
-					/>
-					<Header
-						as='h2'
-						content='Blah blah blah blah blah blah'
-						inverted
-						style={{ fontSize: '1.7em', fontWeight: 'normal', marginBottom: 0 }}
-					/>
-		</Container>
-	</Grid.Column>
-	<Grid.Column />
+			{props.showHero ? <Grid.Column>
+				<Container text>
+							<Header
+								as='h1'
+								content='Jeffrey Young'
+								inverted
+								style={{ fontSize: '4em', fontWeight: 'normal', marginTop: '0' }}
+							/>
+							<Header
+								as='h2'
+								content='Blah blah blah blah blah blah'
+								inverted
+								style={{ fontSize: '1.7em', fontWeight: 'normal', marginBottom: 0 }}
+							/>
+				</Container>
+			</Grid.Column> : null}
 </Grid>
 	<style global jsx>{`
 		.gradient-stellar {
