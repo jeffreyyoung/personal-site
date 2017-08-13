@@ -13,10 +13,9 @@ export default (Wrapped) => {
 
     componentDidMount() {
       if (!window._ga_initialized) {
-        initialize('UA-xxxxxxxxx-1`')  // ADD YOUR TRACKING ID
+        initialize('UA-104403950-2')  // ADD YOUR TRACKING ID
         window._ga_initialized = true;
       }
-			console.log('GA YEEEEHAW');
       const location = window.location.pathname + window.location.search
       
       set({page: location})
