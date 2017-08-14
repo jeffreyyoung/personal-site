@@ -20,7 +20,10 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 		const posts = this.props.posts.filter(p => p.data.category === 'projects');
 		return (
 			<Layout showHero={true} {...this.props}>
+				
 				<Container>
+						<h3 style={{textAlign:'center'}}>Previous Projects</h3>
+						<br />
 						<Grid relaxed doubling className='masonry ui three column doubling stackable masonry'>
 								{posts.map(post => <Grid.Column key={post.data.url}><PostCard post={post} /></Grid.Column>)}
 						</Grid>

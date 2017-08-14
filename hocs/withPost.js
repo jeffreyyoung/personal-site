@@ -11,7 +11,6 @@ export default (Wrapped) => {
 		}
 		
 		render() {
-			console.log(posts);
 			const postKey = this.props.url.query.postUrl || this.props.url.pathname;
 			const post = posts[postKey];
 			return (<Wrapped {...this.props} post={post}/>)

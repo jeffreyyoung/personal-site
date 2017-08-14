@@ -1,12 +1,12 @@
 //https://github.com/Semantic-Org/Semantic-UI-React/blob/master/docs/app/Layouts/HomepageLayout.js
-const gradients = ['gradient-stellar', 'gradient-moonrise', 'gradient-peach', 'gradient-dracula', 'gradient-mantle', 'gradient-titanium', 'gradient-opa', 'gradient-sea-blizz', 'gradient-midnight-city', 'gradient-shroom-haze'];
+const gradients = ['gradient-learning-leaning', 'gradient-stellar', 'gradient-moonrise', 'gradient-peach', 'gradient-dracula', 'gradient-mantle', 'gradient-titanium', 'gradient-opa', 'gradient-sea-blizz', 'gradient-midnight-city', 'gradient-shroom-haze'];
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 import Link from 'next/link'
-let gradient = 'gradient-sea-blizz'
+let gradient = 'gradient-learning-leaning'
 import {Component} from 'react'
 
 import Header from 'semantic-ui-react/dist/commonjs/elements/Header'
@@ -14,6 +14,16 @@ import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
 import Segment from 'semantic-ui-react/dist/commonjs/elements/Segment'
 import Grid from 'semantic-ui-react/dist/commonjs/collections/Grid'
 import Menu from 'semantic-ui-react/dist/commonjs/collections/Menu'
+import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon'
+
+function IconLink(name, href) {
+	return (
+		<Link href={href}><a style={{color:'white'}}><Icon
+			name={name}
+			link
+		/></a></Link>
+	)
+}
 
 export default class Hero extends Component { 
 	
@@ -28,7 +38,7 @@ export default class Hero extends Component {
 		const props = this.props;
 		let gridStyles = {};
 		if (props.showHero) {
-			gridStyles.minHeight = 500;
+			gridStyles.minHeight = 400;
 		}
 	
 	return (
@@ -42,24 +52,26 @@ export default class Hero extends Component {
 				<Container>
 					<Menu inverted pointing secondary size='large' style={{backgroundColor: 'transparent', borderColor: 'transparent'}}>
 							<Menu.Item header><span className='yar' onClick={() => {gradient = gradients[getRandomInt(0, gradients.length)]; this.setState({gradientHasBeenUpdated:true})}}>🌮</span></Menu.Item>
-							<Link href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
-							<Link href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
-							<Link href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
+							<Link prefetch href='/'><Menu.Item as='a' active active={props.path === '/'}>Projects</Menu.Item></Link>
+							<Link prefetch href='/resume'><Menu.Item as='a' active={props.path === '/resume'}>Resume</Menu.Item></Link>
+							<Link prefetch href='/about'><Menu.Item as='a' active={props.path === '/about'}>About Me</Menu.Item></Link>
 					</Menu>
 				</Container>
 			{props.showHero ? <Grid.Column>
 				<Container text>
 							<Header
 								as='h1'
-								content='Jeffrey Young'
 								inverted
 								style={{ fontSize: '4em', fontWeight: 'normal', marginTop: '0' }}
-							/>
+							>
+								Jeffrey Young
+								<Header.Subheader>
+									Front end software engineer at Adobe looking to do freelance work
+								</Header.Subheader>
+							</Header>
 							<Header
 								as='h2'
-								content='Blah blah blah blah blah blah'
-								inverted
-								style={{ fontSize: '1.7em', fontWeight: 'normal', marginBottom: 0 }}
+								content={[IconLink('github alternate', 'https://www.github.com/jeffreyyoung'), IconLink('linkedin', 'https://www.linkedin.com/in/jeffreyyoung4/')]}
 							/>
 				</Container>
 			</Grid.Column> : null}
@@ -71,6 +83,12 @@ export default class Hero extends Component {
 		
 		.gradient-transition {
 			transition: background 1s ease-in;
+		}
+		.gradient-learning-leaning {
+			background: #F7971E !important;
+			background: -webkit-linear-gradient(to right, #FFD200, #F7971E) !important;
+			background: linear-gradient(to right, #FFD200, #F7971E) !important;
+
 		}
 		.gradient-little-leaf {
 			background: #76b852 !important;  /* fallback for old browsers */

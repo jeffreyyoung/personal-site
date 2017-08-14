@@ -15,6 +15,7 @@ export default (Wrapped) => {
 					<meta charset="utf-8" />
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<link rel="stylesheet" href="/static/vendor/semantic.min.css"></link>
+					<link rel="stylesheet" href="/static/vendor/UI-Icon-master/icon.min.css"></link>
 				</Head>
 				<Wrapped {...this.props} />
 				<style jsx global>{`
