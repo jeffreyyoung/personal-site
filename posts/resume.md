@@ -48,7 +48,7 @@ Progressively evolve cross-platform ideas before impactful infomediaries. Energi
 
 -------
 
-### Technical {#technical}
+#### Technical {#technical}
 
 1. XHTML
 1. CSS
