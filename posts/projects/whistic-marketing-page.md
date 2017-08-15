@@ -7,7 +7,7 @@ order: 1
 description: Whistic came to me looking to redesign their marketing website.  After giving me designs, a friend and I converted those designs to html.
 ---
 
-Whistic came to me looking to redesign their marketing website.  After giving me designs, a friend and I converted those designs to html.
+Whistic came to me looking to redesign their marketing website.  After giving me designs, a friend and I converted those designs to html.  We were able to get the finished product to them in one week.
 
 ![Scrolling through whistic's home page](/static/images/giphy-whistic-marketing-scrolling.gif)
 

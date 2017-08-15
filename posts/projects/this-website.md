@@ -1,5 +1,5 @@
 ---
-title: I Built The Webpage You're Looking at
+title: Personal Web Page
 image: static/this-website.png
 imageDescription: Screen shot of the current website
 category: projects

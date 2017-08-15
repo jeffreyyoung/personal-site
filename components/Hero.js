@@ -18,7 +18,7 @@ import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon'
 
 function IconLink(name, href) {
 	return (
-		<Link href={href}><a style={{color:'white'}}><Icon
+		<Link key={name} href={href}><a style={{color:'white'}}><Icon
 			name={name}
 			link
 		/></a></Link>
@@ -71,7 +71,7 @@ export default class Hero extends Component {
 							</Header>
 							<Header
 								as='h2'
-								content={[IconLink('github alternate', 'https://www.github.com/jeffreyyoung'), IconLink('linkedin', 'https://www.linkedin.com/in/jeffreyyoung4/')]}
+								content={[IconLink('github alternate', 'https://www.github.com/jeffreyyoung'), IconLink('linkedin', 'https://www.linkedin.com/in/jeffreyyoung4/'), IconLink('instagram', 'https://www.instagram.com/jmoneyswagtime/'), IconLink('mail', 'mailto:jeffreytyoung1990@gmail.com')]}
 							/>
 				</Container>
 			</Grid.Column> : null}
