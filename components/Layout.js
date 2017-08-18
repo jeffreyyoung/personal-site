@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Hero from './Hero'
-
+import NavBar from './NavBar';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 
@@ -22,9 +22,7 @@ export default class Layout extends Component {
 	render() {
 		return (
 			<div>
-				<Hero showHero={this.props.showHero} path={this.props.url.pathname}/>
-				<br />
-				<br />
+				<NavBar url={this.props.url} />
 				{this.props.children}
 				<style jsx global>{`
 					/* Make clicks pass-through */

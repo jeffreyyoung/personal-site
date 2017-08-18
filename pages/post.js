@@ -4,35 +4,18 @@ import enhancePage from './../hocs/enhancePage';
 import Layout from './../components/Layout';
 import PostContent from './../components/PostContent';
 import NextPost from './../components/NextPost';
-import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
-import Segment from 'semantic-ui-react/dist/commonjs/elements/Segment'
-import Grid from 'semantic-ui-react/dist/commonjs/collections/Grid'
-import Menu from 'semantic-ui-react/dist/commonjs/collections/Menu'
-import Breadcrumb from 'semantic-ui-react/dist/commonjs/collections/Breadcrumb'
-import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon'
 import Link from 'next/link'
 
 export default enhancePage(withPosts(withPost(({post,posts, url}) => (
 	<Layout url={url}>
-		<Container>
+		<section>
 		<main>
 			<article>
-				<Grid>
-					<Grid.Row>
-						<Grid.Column mobile={16} tablet={14} computer={12}>
-						<Breadcrumb>
-							<Link href='/'><Breadcrumb.Section link>Projects</Breadcrumb.Section></Link>
-							<Breadcrumb.Divider />
-							<Breadcrumb.Section active>{post.data.title}</Breadcrumb.Section>
-						</Breadcrumb>
-							<h1>{post.data.title}</h1>
+							<Link href='/'><a>Projects</a></Link>
 							<PostContent post={post} />
 							<NextPost post={post} posts={posts} />
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
 			</article>
 		</main>
-		</Container>
+		</section>
 	</Layout>
 ))));

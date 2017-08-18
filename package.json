@@ -15,7 +15,6 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
-    "semantic-ui-react": "^0.71.4",
     "showdown": "^1.7.2",
     "slug": "^0.9.1",
     "webpack-bundle-analyzer": "^2.9.0"

@@ -31,7 +31,7 @@ FileListPlugin.prototype.apply = function(compiler) {
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const nextPathMapHelper = require('./util/nextConfigHelper');
-const generatePosts = require('./generatePostHtml');
+
 module.exports = {
   exportPathMap: function () {
     return nextPathMapHelper({
@@ -40,4 +40,15 @@ module.exports = {
 			"/resume": { page: "/resume" }
     })
   },
+	webpack: function (config) {
+			
+			// config.plugins.push(new BundleAnalyzerPlugin({
+			// 	analyzerMode: 'server',
+			// 	analyzerPort: 8888,
+			// 	openAnalyzer: true
+			// }))
+			config.plugins.push(new BundleAnalyzerPlugin())
+
+		return config
+	}
 }
