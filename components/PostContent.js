@@ -8,7 +8,7 @@ export default ({post}) => (
 				max-width: 100%;
 			}
 			
-			p {
+			.PostContent-markdown-wrapper p {
 				font-size: 1.25em;
 			}
 		`}</style>

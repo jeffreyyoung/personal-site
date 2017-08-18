@@ -17,12 +17,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 	
 	render(){
 		const props = this.props;
-		const posts = this.props.posts.filter(p => p.data.category === 'projects').sort((a,b) => {
-			const order1 = parseInt(a.data.order),
-				order2 = parseInt(b.data.order)
-			return order1 - order2;
-		});
-		console.log(posts);
+		const posts = this.props.posts;
 		return (
 			<Layout showHero={true} {...this.props}>
 				

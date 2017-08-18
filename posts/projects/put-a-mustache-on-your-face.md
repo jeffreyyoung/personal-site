@@ -1,5 +1,5 @@
 ---
-title: PutAMustacheOnYourFace.com
+title: Put A Mustache On Your Face .com
 image: static/mustache.png
 imageDescription: Image of A Person With A mustache On Their Face
 category: projects

@@ -13,14 +13,20 @@ url: /resume
  
 ## Experience
 
-Adobe
+__Adobe__
   *Front End Software Engineer*
-  __Aug 2016-Present__
+  Aug 2016-Present
   React.js, Angular.js, Node.js, PHP
 
-Qualtrics
+__Qualtrics__
   *Full Stack Software Engineer*
-  __Jan 2015-April 2016__
+  Jan 2015-April 2016
   Java Spring, Python, Angular.js, PHP
 
 ------
+
+## Education
+
+__Brigham Young University__
+ *Computer Science*
+ Aug 2009-April 2016

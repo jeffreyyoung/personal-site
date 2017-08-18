@@ -1,7 +1,9 @@
 import withPost from './../hocs/withPost';
+import withPosts from './../hocs/withPosts';
 import enhancePage from './../hocs/enhancePage';
 import Layout from './../components/Layout';
 import PostContent from './../components/PostContent';
+import NextPost from './../components/NextPost';
 import Container from 'semantic-ui-react/dist/commonjs/elements/Container'
 import Segment from 'semantic-ui-react/dist/commonjs/elements/Segment'
 import Grid from 'semantic-ui-react/dist/commonjs/collections/Grid'
@@ -9,7 +11,8 @@ import Menu from 'semantic-ui-react/dist/commonjs/collections/Menu'
 import Breadcrumb from 'semantic-ui-react/dist/commonjs/collections/Breadcrumb'
 import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon'
 import Link from 'next/link'
-export default enhancePage(withPost(({post, url}) => (
+
+export default enhancePage(withPosts(withPost(({post,posts, url}) => (
 	<Layout url={url}>
 		<Container>
 		<main>
@@ -24,6 +27,7 @@ export default enhancePage(withPost(({post, url}) => (
 						</Breadcrumb>
 							<h1>{post.data.title}</h1>
 							<PostContent post={post} />
+							<NextPost post={post} posts={posts} />
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
@@ -31,4 +35,4 @@ export default enhancePage(withPost(({post, url}) => (
 		</main>
 		</Container>
 	</Layout>
-)));
+))));
