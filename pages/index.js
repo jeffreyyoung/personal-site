@@ -19,7 +19,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 		return (
 			<Layout {...this.props} showHero={true}>
 				<Hero />
-				<Container className=''>
+				<Container className='bg-near-white'>
 						<h1 className='f3 tc tl-ns f2-m f1-l fw3 black-90 mv3'>Previous Projects</h1>
 						<h2 className='center tc tl-ns f5 black-50 f4-m f3-l fw3 balck-50 mt0'>A collection of freelance projects, personal projects for fun, and work projects.</h2>
 						<br />

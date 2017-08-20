@@ -7,10 +7,6 @@ export default ({post}) => (
 				margin: 0 auto;
 				max-width: 100%;
 			}
-			
-			.PostContent-markdown-wrapper p {
-				font-size: 1.25em;
-			}
 		`}</style>
 	</div>
 )

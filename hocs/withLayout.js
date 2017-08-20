@@ -10,7 +10,7 @@ export default (Wrapped) => {
 		}
 		
     render() {
-      return (<div className='w-100 sans-serif bg-near-white'>
+      return (<div className='w-100 sans-serif bg-white'>
 				<Head>
 					<meta charset="utf-8" />
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
