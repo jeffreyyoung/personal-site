@@ -2,8 +2,8 @@ import Link from 'next/link'
 //<Link href={`/post?postUrl=${encodeURI(post.data.url)}`} as={post.data.url}>
 export default ({post}) => (
   <Link href={`/post?postUrl=${encodeURI(post.data.url)}`} as={post.data.url}>
-			<article className="shadow-raise pointer make-it-fast box-shadow raise no-underline bg-white dark-gray center">
-				<div className='img-wrapper cover db' style={{backgroundImage: `url(${post.data.image})`}}/>
+			<article className="shadow-raise pointer no-underline bg-white dark-gray center">
+				<div className='img-wrapper m0 cover db' style={{backgroundImage: `url(${post.data.image})`}}/>
 				<div className="pa3">
 					<div className="dt w-100">
 						<div className="dtc">
@@ -17,7 +17,17 @@ export default ({post}) => (
 						{post.data.description}
 					</p>
 				</div>
-				<style jsx>{`				
+				<style jsx>{`
+					.img-wrapper {
+						height: 300px;
+						width: 350px;
+					}
+					
+					article {
+						width: 350px;
+						height: 500px;
+					}
+					
 					.shadow-raise {
 					  position: relative;
 					  box-shadow: 0 20px 20px rgba(0,0,0,.08);
