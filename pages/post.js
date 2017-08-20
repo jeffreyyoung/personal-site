@@ -12,6 +12,7 @@ export default enhancePage(withPosts(withPost(({post,posts, url}) => (
 			<main className='pt5'>
 				<article className='measure center'>
 								<Link href='/'><a>Projects</a></Link>
+								<h1 className='f1 fw3'>{post.data.title}</h1>
 								<PostContent post={post} />
 								<NextPost post={post} posts={posts} />
 				</article>
