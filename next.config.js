@@ -47,7 +47,7 @@ module.exports = {
 			// 	analyzerPort: 8888,
 			// 	openAnalyzer: true
 			// }))
-			config.plugins.push(new BundleAnalyzerPlugin())
+			// config.plugins.push(new BundleAnalyzerPlugin())
 
 		return config
 	}
