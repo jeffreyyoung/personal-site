@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Container from './Container';
 export default class NavBar extends Component {
 	constructor(props, context) {
 		super(props,context);
@@ -38,18 +39,20 @@ export default class NavBar extends Component {
 		const activeColor = 'black';
 		console.log(props.url);
 		return (
-				<nav className={"fixed bg-white-90 flex flex-row justify-end tc pt4 pl3 pr3 w-100 border-box"}>
-					<Link href='/' ><a className={classnames("link dim f5 dib fw3 black pl2 pr2 bw2 pb3", {'bb b--orange': props.url.pathname === '/'})} title="Home">Home</a></Link>
-					<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black pl2 pr2 bw2 pb3", {'bb b--orange': props.url.pathname === '/projects'})} title="Projects">Projects</a></Link>
-					<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black pl2 pr2 bw2 pb3", {'bb b--orange': props.url.pathname === '/resume'})} title="Resume">Resume</a></Link>
-					<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black pl2 pr2 bw2 pb3", {'bb b--orange': props.url.pathname === '/about'})} title="About Me">About Me</a></Link>
-					<style jsx>{`
-						nav {
-							z-index: 1;
-							//box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.04);
-							transition: background-color 1s;
-						}
-					`}</style>
+				<nav className={"fixed pt3 bg-white-90 tc w-100 border-box"}>
+					<div className='mw-1024 center mw-1024 w-100 flex flex-row justify-end center pr3'>
+						<Link href='/' ><a className={classnames("link dim f5 dib fw3 black ml2 bw2 pb3", {'bb b--orange': props.url.pathname === '/'})} title="Home">Home</a></Link>
+						<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black ml2 bw2 pb3", {'bb b--orange': props.url.pathname === '/projects'})} title="Projects">Projects</a></Link>
+						<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black ml2 bw2 pb3", {'bb b--orange': props.url.pathname === '/resume'})} title="Resume">Resume</a></Link>
+						<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black ml2 bw2 pb3", {'bb b--orange': props.url.pathname === '/about'})} title="About Me">About Me</a></Link>
+						<style jsx>{`
+							nav {
+								z-index: 1;
+								//box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.04);
+								transition: background-color 1s;
+							}
+						`}</style>
+					</div>
 				</nav>
 		)
 	}
