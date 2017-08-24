@@ -36,7 +36,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 						</div>
 					</div>
 				</Container>
-				<Container>
+				<Container pb={false}>
 					<div className='flex-l w-100'>
 						<div className='flex-auto'>
 							<h1 className='f1 fw3 black mb0'>Mobile</h1>
