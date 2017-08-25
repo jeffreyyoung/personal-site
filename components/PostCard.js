@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default ({post}) => (
   <Link href={`/post?postUrl=${encodeURI(post.data.url)}`} as={post.data.url}>
 			<article className="shadow-raise pointer no-underline bg-white dark-gray center">
-				<div className='img-wrapper m0 cover db' style={{backgroundImage: `url(${post.data.image})`}}/>
+				<div className='img-wrapper m0 cover db' style={{backgroundImage: `url(/${post.data.image})`}}/>
 				<div className="pa3">
 					<div className="dt w-100">
 						<div className="dtc">
