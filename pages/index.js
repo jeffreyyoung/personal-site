@@ -26,7 +26,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 					</div>
 				</Container>
 				<Container className='bg-near-white bg-white-ns'>
-					<div className='flex-ns w-100'>
+					<div className='flex-ns w-100 pt5-ns pb5-ns'>
 						<div className='mw6 center flex-auto'>
 							<img src='static/images/mac.png' alt='Macbook displaying website developed by Jeffrey' />
 						</div>
@@ -37,7 +37,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 					</div>
 				</Container>
 				<Container pb={false}>
-					<div className='flex-ns w-100'>
+					<div className='flex-ns w-100 pt5-ns'>
 						<div className='flex-auto'>
 							<h1 className='f1 fw3 black mb0'>Mobile</h1>
 							<h2 className='measure f3 fw3 black-90 mt0 mb2 lh-copy'>A collection of freelance projects, personal projects for fun, and work projects.</h2>
