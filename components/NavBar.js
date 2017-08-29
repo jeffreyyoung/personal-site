@@ -39,12 +39,12 @@ export default class NavBar extends Component {
 		const activeColor = 'black';
 		console.log(props.url);
 		return (
-				<nav className={"fixed pt3 bg-white-70 tc w-100 border-box"}>
+				<nav className={"fixed pt4 bb b--near-white bg-white-70 tc w-100 border-box"}>
 					<div className='mw-1024 center mw-1024 w-100 flex flex-row justify-end center pr3'>
-						<Link href='/' ><a className={classnames("link dim f5 dib fw3 black ml3 bw2 pb3", {'bb b--orange': props.url.pathname === '/'})} title="Home">Home</a></Link>
-						<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black ml3 bw2 pb3", {'bb b--orange': props.url.pathname === '/projects'})} title="Projects">Projects</a></Link>
-						<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black ml3 bw2 pb3", {'bb b--orange': props.url.pathname === '/resume'})} title="Resume">Resume</a></Link>
-						<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black ml3 bw2 pb3", {'bb b--orange': props.url.pathname === '/about'})} title="About Me">About Me</a></Link>
+						<Link href='/' ><a className={classnames("link dim f5 dib fw3 black bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/'})} title="Home">Home</a></Link>
+						<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/projects'})} title="Projects">Projects</a></Link>
+						<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/resume'})} title="Resume">Resume</a></Link>
+						<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/about'})} title="About Me">About Me</a></Link>
 						<style jsx>{`
 							nav {
 								z-index: 1;
