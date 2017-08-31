@@ -18,14 +18,16 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 		const posts = this.props.posts;
 		return (
 			<Layout {...this.props} showHero={true}>
-				<Container className="pv6 pv6-ns justify-center flex flex-column bg-white">
-					<div>
-						<h1 className="f1 fw3 black mb0">Hi. I'm Jeffrey.</h1>
-						<h2 className="measure f4 fw3 black-90 mt0 mb2 lh-copy">I do freelance web and mobile development.</h2>
-						<a className="center f5-ns fw6 dib ba b--black-20 bg-green white ph4 pv3 br2 dim no-underline" href="#0">Message Me</a>
-					</div>
-				</Container>
-				<Container className='bg-near-white bg-white-ns'>
+				<div className='bg-near-white'>
+					<Container className="pv6 pv6-ns justify-center flex flex-column">
+						<div>
+							<h1 className="f1 fw3 black-80 mb0">Jeffrey Young.</h1>
+							<h2 className="black-80 measure f3 fw3 mt0 mb2 lh-copy">I do freelance web and mobile development.  If you need development for a good cause I can do it for free. :)</h2>
+							<a className="center f5-ns fw6 dib ba b--black-20 bg-green white ph4 pv3 br2 dim no-underline" href="#0">Message Me</a>
+						</div>
+					</Container>
+				</div>
+				<Container className='bg-white bg-white-ns'>
 					<div className='flex-ns w-100 pt5-ns pb5-ns'>
 						<div className='mw6 center flex-auto'>
 							<img src='static/images/mac.png' alt='Macbook displaying website developed by Jeffrey' />
