@@ -20,7 +20,7 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 				<Container className=''>
 						<br />
 						<br />
-						<h1 className='f1 fw3 black mb0'>Previous Projects</h1>
+						<h1 className='f1 fw5 black mb0'>Previous Projects</h1>
 						<h2 className='f3 fw3 black-90 mt0 mb2 lh-copy measure'>A collection of freelance projects, personal projects for fun, and work projects.</h2>
 						<br />
 						<ul className='pa0 flex-wrap flex'>

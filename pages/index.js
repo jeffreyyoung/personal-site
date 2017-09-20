@@ -19,41 +19,43 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 		const posts = this.props.posts;
 		return (
 			<Layout {...this.props} showHero={true}>
-				<div className='pv5'>
+				<div className='pv5 black-80'>
 					<Container className="justify-center flex flex-column">
-							<h1 className="f-subheadline fw6 black-80 mv0 tc">Freelance Developer</h1>
-							<h2 className="black-80 mt0 f2 fw5 mb2 tc">I build web and mobile apps.</h2>
+							<h1 className="f-subheadline-l f2  f1-m fw6 mb3 black-80 tc">Freelance Developer</h1>
+							<h2 className="black-80 mt0 f1-l f2-m fw5 tc">I build web and mobile apps.</h2>
 							<div className='flex justify-center items-center'>
 								<a className="f5-ns fw6 dib ba b--black-20 bg-green white ph4 pv3 br2 grow no-underline" href="#0">Email Me</a>
-								<a className="f5-ns fw6 dib ba b--black-20 bg-green white ml3 ph4 pv3 br2 grow no-underline" href="#0">Message Me</a>
+								<a className="f5-ns fw6 dib ba b--black-20 bg-green white ml3 ph4 pv3 br2 grow no-underline" href="#0">
+								<svg xmlns="http://www.w3.org/2000/svg" className='h1 w1' viewBox="96 93 322 324"><path d="M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z" fill="#ffffff"/></svg>  
+								<span>  Message Me</span></a>
 							</div>
 					</Container>
 				</div>
 				<Container className='flex flex-wrap'>
 					<div className='pr0 pr2-ns pb3 flex-auto flex w-50-ns'>
-						<div className='bg-near-white pa4 tc flex-auto'>
+						<div className='bg-near-white pa4 br2 tc flex-auto'>
 							<div className='h5 relative'>
 								<img className='img-centered'src='static/images/macbook.png' />
 							</div>
-							<h2 className='f2 fw5 mb0'>Web</h2>
-							<p className='f4 fw4 mt3'>I build modern, responsive web sites and web apps.</p>
+							<h2 className='f2 fw5 mb0 black-90'>Web</h2>
+							<p className='f4 fw3 mt3 black-90'>I build modern, responsive web sites and web apps.</p>
 						</div>
 					</div>
 					<div className='pr0 pl2-ns pb3 flex-auto flex w-50-ns'>
-						<div className='bg-near-white pa4 tc flex-auto'>
+						<div className='bg-near-white pa4 br2 tc flex-auto'>
 							<div className='h5 relative'>
 								<img className='img-centered'src='static/images/iphone7.png' />
 							</div>
-							<h2 className='f2 fw5 mb0'>Mobile</h2>
-							<p className='f4 fw4 mt3'>I build both Android and iOS apps. I develop with swift or react native for iOS or react native for Android.</p>
+							<h2 className='f2 fw5 mb0 black-90'>Mobile</h2>
+							<p className='f4 fw3 mt3 black-90'>I build both Android and iOS apps. I develop with swift or react native for iOS or react native for Android.</p>
 						</div>
 					</div>
 				</Container>
 				<Container className=''>
-					<h2 className='f2 fw5 tc'>Recent Projects</h2>
+					<h2 className='f2 fw5 mb0 tc black-80'>Recent Projects</h2>
 				</Container>	
 					<div className='flex flex-wrap mw-1024 center pa2'>
-						{posts.map(post => (<div className='w-third-ns pa2 pb3	'><ProjectCard {...post.data}
+						{posts.filter((post,i) => i < 6).map(post => (<div className='w-third-ns w-50-m pa2 pb4	'><ProjectCard {...post.data}
 							title={post.data.title}
 							image={post.data.image}
 							imageDescription={post.data.imageDescription}

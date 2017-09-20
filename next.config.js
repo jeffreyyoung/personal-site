@@ -29,7 +29,7 @@ FileListPlugin.prototype.apply = function(compiler) {
 };
 
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const nextPathMapHelper = require('./util/nextConfigHelper');
 
 module.exports = {
