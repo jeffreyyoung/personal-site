@@ -33,7 +33,7 @@ export default class Layout extends Component {
 					}
 
 					#nprogress .bar {
-					  background: #29d;
+					  background: #19a974;
 
 					  position: fixed;
 					  z-index: 1031;
@@ -74,8 +74,8 @@ export default class Layout extends Component {
 					  box-sizing: border-box;
 
 					  border: solid 2px transparent;
-					  border-top-color: #29d;
-					  border-left-color: #29d;
+					  border-top-color: #19a974;
+					  border-left-color: #19a974;
 					  border-radius: 50%;
 
 					  -webkit-animation: nprogress-spinner 400ms linear infinite;

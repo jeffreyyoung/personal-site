@@ -8,9 +8,9 @@ import Link from 'next/link'
 import Container from './../components/Container';
 export default enhancePage(withPosts(withPost(({post,posts, url}) => (
 	<Layout url={url}>
-		<Container>
-			<main className='pt5 black-90'>
-				<article>
+		<Container className=''>
+			<main className='black-90'>
+				<article className='measure-wide center'>
 								<h1 className='f1 fw5'>{post.data.title}</h1>
 								<PostContent post={post} />
 								<NextPost post={post} posts={posts} />

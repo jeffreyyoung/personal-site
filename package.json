@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "aos": "^2.2.0",
     "bluebird": "^3.5.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.1.2",

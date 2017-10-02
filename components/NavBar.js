@@ -39,8 +39,8 @@ export default class NavBar extends Component {
 		const activeColor = 'black';
 		console.log(props.url);
 		return (
-				<nav className={"pt4 b--near-white bg-white-70 tc w-100 border-box"}>
-					<div className='mw-1024 center mw-1024 w-100 flex flex-row justify-between center pr3'>
+				<nav className={"pt4 bg-white-70 tc w-100 border-box bb b--black-10"}>
+					<div className='mw-1024 center mw-1024 w-100 flex flex-row justify-between center pr3 pl3'>
 						<div>
 							<Link href='/' ><a className={classnames("link dim f5 dib fw3 black bw2 pb4 fw5")} title="Home">Jeffrey Young</a></Link>
 						</div>

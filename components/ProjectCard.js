@@ -3,17 +3,28 @@ import Truncate from 'react-truncate'
 
 export default ({title, description, image, imageDescription, url}) => (
 	<Link href={`/post?postUrl=${encodeURI(url)}`} as={url}>
-		<div className='grow pointer'>
+		<a className='no-underline'>
+		<div className='pointer grow bg-white' >
 			<div className='bg-near-white br2 w-100 img-wrapper'>
-				<img src={image} className='br2' alt={imageDescription}/>
+				<img src={image} className='br2 br--top w-100 img-wrapper' alt={imageDescription}/>
 			</div>
-			<h2 className='fw5 mv3 black-80'>{title}</h2>
-			<Truncate className='fw3 mt0 black-80 gray' lines={3}><p>{description}</p></Truncate>
+			<div className='pt3 text-wrapper'>
+				<h2 className='fw5 ma0 mb3 black-80'>{title}</h2>
+				<p className='fw3 black-80 gray flex-auto'>{description}</p>
+			</div>
 			<style jsx>{`
 				.img-wrapper {
+					height: 15rem;
+				}
+				.text-wrapper {
 					height: 10rem;
+					overflow: hidden;
+				}
+				img {
+					object-fit: cover;
 				}
 			`}</style>
 		</div>
+		</a>
 	</Link>
 )

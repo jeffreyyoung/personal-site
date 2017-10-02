@@ -1,6 +1,6 @@
 ---
 title: Whistic Marketing Page
-image: static/whistic-homepage.png
+image: static/images/imac2013_left.png
 imageDescription: Whistic Website
 category: projects
 order: 1
