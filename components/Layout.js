@@ -23,9 +23,7 @@ export default class Layout extends Component {
 	render() {
 		return (
 			<div>
-				<NavBar url={this.props.url} />
 				{this.props.children}
-				<Footer />
 				<style jsx global>{`
 					/* Make clicks pass-through */
 					#nprogress {

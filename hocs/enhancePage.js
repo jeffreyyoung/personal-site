@@ -1,9 +1,9 @@
 import withAnalytics from './withAnalytics';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import withLayout from './withLayout';
+import withGlobalStyles from './withGlobalStyles';
 
 
 export default (Component) => {
-	return withLayout(withAnalytics(Component));
+	return withGlobalStyles(withAnalytics(Component));
 }
