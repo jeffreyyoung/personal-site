@@ -4,11 +4,10 @@ export default ({post}) => (
 		<style jsx global>{`
 			.PostContent-markdown-wrapper img {
 				display: block;
-				margin: 3rem auto;
+				margin: 0 auto;
 				max-width: 100%;
 			}
 
-			
 			.PostContent-markdown-wrapper p {
 				font-size: 1.25rem;
 				line-height: 1.5;

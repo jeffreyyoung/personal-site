@@ -5,6 +5,7 @@ imageDescription: Demo of Analysis Workspace with Collaboration
 category: projects
 order: 3
 description: During a week long hackathon consisting of the Adobe Analytics engineering organization, 2 coworkers and I added features to an existing product that was elected to be a finalist in the hackathon competition.  We eventually got to demo our app to the CEO of Adobe.
+tags: [Node, Web]
 ---
 
 Last December Adobe had a week long hackathon where any engineer could build anything they wanted as long as whatever they built related to Adobe in some way.

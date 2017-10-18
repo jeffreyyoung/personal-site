@@ -11,7 +11,8 @@ export default enhancePage(withPosts(withPost(({post,posts, url}) => (
 		<Container className=''>
 			<main className='black-90'>
 				<article className='measure-wide center'>
-								<h1 className='f1 fw5'>{post.data.title}</h1>
+								<h1 className='f1 fw5 mb2'>{post.data.title}</h1>
+								<h6 className='f3 fw3 mt0 gray'>{post.data.tags.join(', ')}</h6>
 								<PostContent post={post} />
 								<NextPost post={post} posts={posts} />
 				</article>

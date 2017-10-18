@@ -14,6 +14,6 @@ export default ({post, posts}) => {
 		<br />
 		<br />
 		<h3><i>See another project...</i></h3>
-		  <Link href={`/post?postUrl=${encodeURI(nextPost.data.url)}`} as={nextPost.data.url}><a>Next post</a></Link>
+		  <Link href={`/post?postUrl=${encodeURI(nextPost.data.url)}`} as={nextPost.data.url}><a>{nextPost.data.title}</a></Link>
 	</div>)
 }

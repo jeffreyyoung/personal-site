@@ -5,6 +5,7 @@ imageDescription: Image of A Person With A mustache On Their Face
 category: projects
 order: 4
 description: After starting and not finishing too many overly ambitious projects.  I decided to build a simple web app where a user could login with facebook, select a photo, and then view that photo with a mustache on it.
+tags: [Python, graphql, react]
 ---
 
 After starting and not finishing too many overly ambitious projects.  I decided to build a simple web app where a user could login with facebook, select a photo, and then view that photo with a mustache on it.

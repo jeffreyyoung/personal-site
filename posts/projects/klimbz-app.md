@@ -5,6 +5,7 @@ imageDescription: Klimbz App
 category: projects
 order: 2
 description: After using a cluncky web UI, I decided to create a proof of concept native app with a better user experience.
+tags: [iOS, Android]
 ---
 
 Every few weeks I participate in a climbing league where we are required to record climbs with a clunky not so mobile friendly web page.  As a little side project I wanted to write an App that would make the process of recording climbs easier.

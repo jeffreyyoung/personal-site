@@ -1,0 +1,448 @@
+#ld-cache-settings {
+	/* Top Bar: */	
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 315px;
+	color: #FBFBFB;
+	font-weight: 200;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	-webkit-user-select: none;
+	overflow: hidden;
+	z-index: 14000;
+}
+
+#ld-cache-settings .content {
+	position: relative;
+	right: -255px;
+	transition: right 100ms ease-out;
+}
+
+/* Style the radio button */
+#ld-cache-settings input[type="radio"] {
+	position: relative;	
+	outline: none;
+}
+
+#ld-cache-settings input[type="radio"]:before {
+	position: absolute;
+	content: ' ';
+	top: 0px;
+	left: 0;	
+	background: white;
+	outline: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+#ld-cache-settings input[type="radio"]:checked:before {
+	background: #84D1E0;
+}
+
+#ld-cache-settings input[type="radio"]:checked:after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	content: ' ';	
+	background: white;
+	outline: none;
+	width: 6px;
+	height: 6px;
+	border-radius: 20px;
+}
+
+#ld-cache-settings .radio-option {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+#ld-cache-settings .radio-option span {
+	display: inline-block;
+	margin-left: 2px;
+}
+
+/* Style the dropdown */
+#ld-cache-settings .settings select {
+	background: white;
+	outline: none;
+	width: 195px;
+}
+
+/* Style the form */
+#ld-cache-settings section label.row-label {
+	display: inline-block;
+	width: 60px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+#ld-cache-settings section div.row {
+	margin-top: 10px;
+}
+
+#ld-cache-settings section div.row:first-child {
+	margin-top: 5px;
+	margin-bottom: 12px;
+}
+
+/* Style the new data-set button */
+#ld-cache-settings section .new-dataset {
+	position: relative;
+	top: 3px;
+	left: 8px;	
+	outline: none;
+	border-radius: 20px;	
+	width: 18px;
+	height: 18px;
+	border: 1px solid #CCC;
+	background: transparent;	
+	color: transparent;
+}
+
+#ld-cache-settings section .new-dataset:after {
+	content: '+';
+	position: absolute;
+	top: -2px;
+	left: 4px;
+	color: #CCC;
+}
+
+#ld-cache-settings section .new-dataset:hover {
+	background: #CCC;
+}
+
+#ld-cache-settings section .new-dataset:hover:after {
+	color: #222;
+}
+
+#ld-cache-settings .settings {
+	overflow: hidden;
+	height: 0px;
+	transition: height 90ms ease-out 60ms, opacity 90ms ease-out 55ms;
+	opacity: 0;
+}
+
+#ld-cache-settings.open .settings {
+	transition: height 90ms ease-out, opacity-out 100ms ease-out;
+}
+
+#ld-cache-settings.open .content {
+	transition: right 100ms ease-out 60ms;
+}
+
+#ld-cache-settings .content:hover  {
+	right: 0;	
+}
+
+#ld-cache-settings .content:hover .settings {
+	height: 200px;	
+	opacity: 1;
+}
+
+#ld-cache-settings .caching-paused section {
+	opacity: 1;
+	transition: opacity 110ms;
+}
+
+#ld-cache-settings .caching-paused section {
+	opacity: 0.45;
+	pointer-events: none;
+}
+
+#ld-cache-settings .content {
+	background: #4B4B4B;
+	border: 1px solid #222222;
+}
+
+#ld-cache-settings header, #ld-cache-settings footer {
+	background: rgba(37,37,37,0.81);
+	border: 1px solid #222222;
+}
+
+#ld-cache-settings header, #ld-cache-settings footer {
+	font-size: 14px;
+	padding: 6px;
+}
+
+#ld-cache-settings header {
+	text-align: center;
+	/*padding-top: 3px;*/
+}
+
+#ld-cache-settings section {
+	font-size: 14px;
+	padding: 10px;
+	padding-bottom: 14px;
+	height: 200px;	
+}
+
+
+#ld-cache-settings section .endpoints {
+	margin: 0; padding: 0;
+}
+
+#ld-cache-settings section .endpoints li {
+	list-style-type: none;
+	padding: 5px;	
+}
+
+#ld-cache-settings section .endpoints li .name {
+	cursor: pointer;
+}
+
+
+#ld-cache-settings section .endpoints li.has-items:hover .clear-items-link {
+	display: inline-block;
+}
+
+#ld-cache-settings section .endpoints li.disabled:hover .clear-items-link {
+	display: none;
+}
+
+#ld-cache-settings section .endpoints li .endpoint-menu {
+	font-size: 14px;
+	display: inline-block;
+	position: relative;
+	line-height: 8px;
+	left: 8px;
+	top: 0px;
+	letter-spacing: 1px;
+	color: #CCC;
+	display: none;
+}
+
+#ld-cache-settings section .endpoints li .clear-items-link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#ld-cache-settings section .endpoints li.has-items .name {
+	color: #93E8F9;
+}
+
+#ld-cache-settings section .endpoints li.disabled .name {
+	text-decoration: line-through;
+	color: #AAA;
+}
+
+#ld-cache-settings footer {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row;
+	-webkit-flex-flow: row;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 46px;
+	padding: 10px;	
+	height: 19px;	
+}
+
+#ld-cache-settings footer .cache-icon {
+	-webkit-flex: 0 0 41px;
+	flex: 0 0 41px;
+	width: 41px;
+	height: 21px;
+	position: relative;
+}
+
+#ld-cache-settings footer .cache-icon .enabled,
+#ld-cache-settings footer .cache-icon .disabled,
+#ld-cache-settings footer .cache-icon .offline { 
+	position: absolute;
+	width: 41px;
+	height: 21px;
+}
+
+#ld-cache-settings footer .cache-icon .enabled, #ld-cache-settings footer .cache-icon .offline {
+	background: url(/assets/cache-active.png) no-repeat;
+	transition: opacity 100ms;
+	opacity: 1;
+}
+
+#ld-cache-settings .caching-paused footer .cache-icon .enabled, #ld-cache-settings .caching-paused footer .cache-icon .offline {
+	opacity: 0;
+}
+
+#ld-cache-settings .offline-mode footer .cache-icon .enabled {
+	opacity: 0;
+}
+
+#ld-cache-settings footer .cache-icon .disabled {
+	background: url(/assets/cache-paused.png) no-repeat;
+}
+
+#ld-cache-settings footer .cache-icon .offline {
+	background: url(/assets/cache-offline.png) no-repeat;
+}
+
+#ld-cache-settings footer .cache-status-message {
+	font-style: italic;	
+	-webkit-flex: 1;	
+	flex: 1;
+	text-align: center;
+	position: relative;	
+	font-weight: 200;
+	font-size: 14px;	
+}
+
+#ld-cache-settings footer .cache-status {	
+	display: inline-block;	
+	color: #FFF;	
+	font-weight: 600;
+	/*width: 19px;*/
+}
+
+#ld-cache-settings .caching-paused footer .cache-status {
+	font-style: italic;
+	color: #BBB;
+	font-weight: 600;	
+}
+
+#ld-cache-settings footer .buttons {
+	display: inline-block;
+	-webkit-flex: 0 0 45px;
+	flex: 0 0 45px;
+}
+
+#ld-cache-settings footer button {
+	outline: none;
+	letter-spacing: 0.5px;
+	font-weight: 200;	
+	color: #FBFBFB;
+	margin-left: 8px;
+	background: rgba(114, 114, 114, .25);
+	border: 1px solid rgba(151, 151, 151, 0.70);
+	border-radius: 3px;
+	font-size: 12px;
+	padding: 4px 6px;
+}
+
+#ld-cache-settings footer button:hover {
+	color: #FFF;
+	background: rgba(114, 114, 114, .45);
+	border: 1px solid rgba(151, 151, 151, 0.80);
+}
+
+#ld-cache-settings .ld-slider {
+	position: relative;
+	width: 45px;
+	height: 26px;
+	cursor: pointer;
+}
+
+#ld-cache-settings .ld-slider .tray-enabled,  #ld-cache-settings .ld-slider .tray-disabled {
+	position: absolute;
+	width: 45px;
+	height: 26px;
+	border-radius: 40px;
+}
+
+#ld-cache-settings .ld-slider .circle {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background: white;
+	box-shadow: 0px 1px 6px rgba(14, 14, 14, .33);
+	width: 22px;
+	height: 22px;
+	border-radius: 22px;
+	-webkit-transition: right 100ms;
+}
+
+#ld-cache-settings .ld-slider.enabled .circle {
+	right: 21px;
+}
+
+#ld-cache-settings .ld-slider .tray-enabled {
+	background-color: #A1E6A8;
+	transition: background-color 100ms;
+}
+
+#ld-cache-settings .offline-mode .ld-slider .tray-enabled {
+	background-color: #8CDDED;
+}
+
+#ld-cache-settings .ld-slider .tray-disabled {
+	-webkit-transition: opacity 200ms;
+	background: #CCC;	
+}
+
+#ld-cache-settings .ld-slider.enabled .tray-disabled {
+	opacity: 0;
+	background: #CCC;
+}
+
+/* Style recording section */
+
+#ld-cache-settings .done-recording {
+	display: none;
+}
+
+#ld-cache-settings .recording .done-recording {
+	display: inline-block;
+}
+
+#ld-cache-settings .recording .buttons .ld-slider {
+	display: none;
+}
+
+#ld-cache-settings .content.recording:hover div.settings {
+	opacity: 0;
+	height: 0;
+	transition: opacity 100ms;
+}
+
+#ld-cache-settings .recording footer .cache-icon .enabled {
+	opacity: 1;
+	background: url(/assets/cache-recording.png) no-repeat;	
+}
+
+#ld-cache-settings .recording .ld-slider .tray-enabled {
+	background-color: #E6A1A1;
+}
+
+#ld-cache-settings .recording footer .cache-status {
+	width: auto;
+}
+
+#ld-cache-settings .cache-info {
+	position: relative;
+	margin-top: 13px;
+	padding-top: 8px;
+	left: 50%;	
+	background: rgba(150, 150, 150, 0.24);	
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+	width: 246px;
+	margin-left: -130px;
+}
+
+#ld-cache-settings .request-count {
+	font-weight: 600;
+	color: #FFF;
+}
+
+#ld-cache-settings .request-count b {
+	transition: color 100ms;	
+	color: #A1E6A8;
+}
+
+#ld-cache-settings .offline-mode .request-count b {
+	color: #8CDDED;
+}
+
+#ld-cache-settings .cache-actions button {
+	margin-top: 5px;
+	outline: none;
+	background: none;
+	border: none;
+	font-size: 12px;
+	text-decoration: underline;
+	color: #FBFBFB;
+	padding: 2px 3px;
+	padding-bottom: 0;
+}

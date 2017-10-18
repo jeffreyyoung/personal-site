@@ -5,6 +5,7 @@ imageDescription: Screen shot of the current website
 category: projects
 order: 4
 description: Wanting to get into freelance web development, I built the website you are looking at to show some of the work I've done.
+tags: [react-js, node]
 ---
 
 Wanting to get into freelance web development, I built the website you are looking at!

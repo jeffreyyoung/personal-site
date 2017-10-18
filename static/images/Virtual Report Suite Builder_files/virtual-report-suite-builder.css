@@ -1,0 +1,172 @@
+.user-select {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.inline {
+  display: inline;
+}
+.overflow-truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.rotate-ninety {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.rotate-negative-ninety {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.disabledOption {
+  color: #bbb;
+}
+.vertical-scroll {
+  overflow-y: auto;
+}
+.horizontal-scroll {
+  overflow-x: auto;
+}
+.intro-welcome-screen {
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: -300px !important;
+}
+.favorite-icon {
+  width: 20px;
+  height: 22px;
+  margin-top: -1px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjAuNzQ0cHgiIGhlaWdodD0iMjAuOTZweCIgdmlld0JveD0iMCAwIDIwLjc0NCAyMC45NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAuNzQ0IDIwLjk2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIG9wYWNpdHk9IjAuMjUiPg0KCTxnPg0KCQk8ZGVmcz4NCgkJCTxyZWN0IGlkPSJTVkdJRF8xXyIgeT0iMCIgd2lkdGg9IjIwLjc0NCIgaGVpZ2h0PSIyMC45NiIvPg0KCQk8L2RlZnM+DQoJCTxjbGlwUGF0aCBpZD0iU1ZHSURfMl8iPg0KCQkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBvdmVyZmxvdz0idmlzaWJsZSIvPg0KCQk8L2NsaXBQYXRoPg0KCQk8cG9seWdvbiBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMTAxMDEiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIxMC4zNzMsMS40OTMgMTIuNzczLDguMjQzIA0KCQkJMTkuMzczLDguMjQzIDE0LjIzLDEyLjU2OSAxNi4zNzMsMTkuNjggMTAuMzczLDE1LjUyNyA0LjM3MywxOS43MjcgNi41MTUsMTIuNTYxIDEuMzczLDguMjQzIDcuOTczLDguMjQzIAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.favorite-icon.selected {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjAuNzQ0cHgiIGhlaWdodD0iMjAuOTYxcHgiIHZpZXdCb3g9IjAgMCAyMC43NDQgMjAuOTYxIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMC43NDQgMjAuOTYxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiNGNUM4NDEiIHBvaW50cz0iMTAuMzczLDEuNDkzIDEyLjc3Myw4LjI0MyAxOS4zNzMsOC4yNDMgMTQuMjMsMTIuNTY4IDE2LjM3MywxOS42OCAxMC4zNzMsMTUuNTI3IDQuMzczLDE5LjcyNyANCgk2LjUxNSwxMi41NjEgMS4zNzMsOC4yNDMgNy45NzMsOC4yNDMgIi8+DQo8cG9seWdvbiBmaWxsPSJub25lIiBzdHJva2U9IiNFNkI0M0MiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIxMC4zNzMsMS40OTMgMTIuNzczLDguMjQzIDE5LjM3Myw4LjI0MyAxNC4yMywxMi41NjggDQoJMTYuMzczLDE5LjY4IDEwLjM3MywxNS41MjcgNC4zNzMsMTkuNzI3IDYuNTE1LDEyLjU2MSAxLjM3Myw4LjI0MyA3Ljk3Myw4LjI0MyAiLz4NCjwvc3ZnPg0K);
+}
+.control-icon {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+.control-icon:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+.display-none {
+  display: none !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.hover1 {
+  cursor: pointer;
+  opacity: .75;
+}
+.hover1:hover {
+  opacity: 1;
+}
+.control-icon {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+.control-icon:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+@-webkit-keyframes flash {
+  0% {
+    background-color: #7dafe6;
+  }
+  100% {
+    background-color: none;
+  }
+}
+@-moz-keyframes flash {
+  0% {
+    background-color: #7dafe6;
+  }
+  100% {
+    background-color: none;
+  }
+}
+@keyframes flash {
+  0% {
+    background-color: #7dafe6;
+  }
+  100% {
+    background-color: none;
+  }
+}
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+.virtual-report-suite-action-bar .coral-Heading--1 {
+  margin: 0 0 0 15px;
+  line-height: 38px;
+}
+.virtual-report-suite-action-bar .coral-Link,
+.virtual-report-suite-action-bar .coral-Button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.virtual-report-suite-action-bar .shell-ActionBar-right {
+  padding-right: 10px;
+}
+.virtual-report-suite-builder .component-pill-group {
+  background-color: inherit;
+  padding-left: 0px;
+}
+.virtual-report-suite-builder .vrs-builder-container {
+  min-height: 395px;
+}
+.virtual-report-suite-builder .vrs-builder-container .vrs-heading-fields input,
+.virtual-report-suite-builder .vrs-builder-container .vrs-heading-fields textarea {
+  width: 100%;
+  resize: none;
+}
+.virtual-report-suite-builder .vrs-builder-container .vrs-heading-fields .coral-Form-fieldlabel {
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+}
+.virtual-report-suite-builder .vrs-builder-left-rail-container {
+  height: 31px;
+  padding-top: 20px;
+  padding-left: 22px;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #d7d7d7;
+}
+.virtual-report-suite-builder .shell-ActionBar-right {
+  padding-right: 15px;
+}
+.virtual-report-suite-builder .shell-ActionBar-right .coral-Link {
+  position: relative;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+.virtual-report-suite-builder .vrs-builder-heading-text {
+  font-size: 22px;
+  font-weight: lighter;
+}
+.virtual-report-suite-builder .shell-ActionBar-left {
+  padding-top: 13px;
+  padding-left: 22px;
+}
+#vrsSpinner {
+  z-index: 151;
+}

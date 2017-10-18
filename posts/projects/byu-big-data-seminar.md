@@ -5,6 +5,8 @@ imageDescription: Screen shot of the current website
 category: projects
 order: 10
 description: A classmate and I developed an app that FamilyTree could use to view where the majority of their census records are based.
+tags: [Big Data, Python, Angular]
+imports: {HelloWorld: './hello-world.js','{ Component1, Component2 }': './components.js'}
 ---
 
 A classmate and I developed an app that FamilyTree could use to view where the majority of their census records are based.

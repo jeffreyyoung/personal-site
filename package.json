@@ -6,6 +6,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "bluebird": "^3.5.0",
+    "chokidar": "^1.7.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.1.2",
     "fs": "^0.0.1-security",
@@ -16,6 +17,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
+    "react-markdown-loader": "^1.1.14",
     "react-truncate": "^2.1.5",
     "showdown": "^1.7.2",
     "slug": "^0.9.1",
