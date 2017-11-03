@@ -39,16 +39,16 @@ export default class NavBar extends Component {
 		const activeColor = 'black';
 		console.log(props.url);
 		return (
-				<nav className={"pt4 bg-white-70 tc w-100 border-box bb b--black-10"}>
+				<nav className={"pt4 bg-light-green tc w-100 border-box bb b--black-10"}>
 					<div className='mw-1024 center mw-1024 w-100 flex flex-row justify-between center pr3 pl3'>
 						<div>
 							<Link href='/' ><a className={classnames("link dim f5 dib fw3 black bw2 pb4 fw5")} title="Home">Jeffrey Young</a></Link>
 						</div>
 						<div>
-							<Link href='/' ><a className={classnames("link dim f5 dib fw3 black bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/'})} title="Home">Home</a></Link>
-							<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/projects'})} title="Projects">Projects</a></Link>
-							<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/resume'})} title="Resume">Resume</a></Link>
-							<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/about'})} title="About Me">About Me</a></Link>
+							<Link href='/' ><a className={classnames("link dim f5 dib fw3 black bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/'})} title="Home">🏠 Home</a></Link>
+							<Link href='/projects' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/projects'})} title="Projects">💻 Projects</a></Link>
+							<Link href='/resume' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/resume'})} title="Resume">📋 Resume</a></Link>
+							<Link href='/about' ><a className={classnames("link dim f5 dib fw3 black ml3 ml4-ns bw2 pb4 fw5", {'bb b--green': props.url.pathname === '/about'})} title="About Me">👦 About Me</a></Link>
 						</div>
 						<style jsx>{`
 							nav {

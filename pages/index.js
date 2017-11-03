@@ -9,6 +9,12 @@ import enhancePage from './../hocs/enhancePage';
 import Hero from './../components/Hero';
 import Container from './../components/Container'
 import sr from './../util/scrollReveal';
+import zenscroll from 'zenscroll'
+if (typeof window !== 'undefined') {
+	sr.reveal('.reveal', 50);
+}
+
+
 
 export default enhancePage(withPosts(class LandingPage extends Component {
 	constructor(props, context) {
@@ -16,16 +22,15 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 	}
 	
 	componentDidMount() {
-		if (typeof window !== 'undefined') {
-			sr.reveal('.reveal', 50);
-		}
+		
 	}
+	
 	render(){
 		const props = this.props;
 		const posts = this.props.posts;
 		return (
 			<div className=''>
-				<section className='bg-light-green'>
+				<section className='bg-light-blue'>
 					<div className='center min-vh-100 pa3 flex flex-column justify-between mw-1024'>
 						<div></div>
 						<div className='flex-grow'>
@@ -33,13 +38,13 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 							<h3 className='reveal f3 f1-ns'>I work at Adobe as a Software Engineer</h3>
 							<h3 className='reveal f3 f1-ns'>I like doing freelance web and mobile development</h3>
 						</div>
-						<div className='w-100'>
-							<h4 onClick={() => this.projectSection.scrollIntoView({behaviour: 'smooth'})} className='reveal grow f4 tc pointer'>View Projects 👇</h4>
+						<div className='w-100 flex justify-center flex-wrap'>
+							<h4 onClick={() => zenscroll.to(this.projectSection)} className='reveal grow f4 tc pointer'>View Projects 👇</h4>
 						</div>
 					</div>
 				</section>
-				<section ref={r => this.projectSection = r}>
-					<h3 className='reveal f4 tc'>Projects</h3>
+				<section id='projects' ref={r => this.projectSection = r}>
+					<h3 className='reveal f4 tc'>💻 Projects</h3>
 					<div className='flex flex-wrap mw-1024 center pa2'>
 						{posts.filter((post,i) => i < 4).map(post => (<div className='w-50-ns w-50-m pa3 pb4 reveal'><ProjectCard {...post.data}
 							title={post.data.title}
@@ -47,6 +52,17 @@ export default enhancePage(withPosts(class LandingPage extends Component {
 							imageDescription={post.data.imageDescription}
 							description={post.data.description}
 						/></div>))}
+					</div>
+					<div className='w-100 flex justify-center flex-wrap'>
+						<h4 onClick={() => zenscroll.to(this.contactSection)} className='reveal grow f4 tc pointer'>See More Stuff 👇</h4>
+					</div>
+				</section>
+				<section ref={r => this.contactSection = r} className='bg-light-yellow'>
+					<div className='center min-vh-100 pa3 flex flex-column justify-center'>
+						<Link href='/resume'><a><h4 className='reveal grow f4 tc pointer'>📋 See My Resume</h4></a></Link>
+						<Link href='/projects'><a><h4 className='reveal grow f4 tc pointer'>💻 View More Projects</h4></a></Link>
+						<Link href='/about'><a><h4 className='reveal grow f4 tc pointer'>👦 Learn More About Me</h4></a></Link>
+						<Link href='/projects'><a><h4 className='reveal grow f4 tc pointer'>✉️ Email Me</h4></a></Link>
 					</div>
 				</section>
 				<style jsx global>{`

@@ -10,4 +10,3 @@ git add -A
 git commit -m "AUTO COMMIT"
 git push -f
 
-cd ./../personal-site
