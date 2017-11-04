@@ -42,14 +42,14 @@ module.exports = {
     })
   },
 	webpack: function (config) {
-			config.module.rules.push({
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          // If you want to enable sharp support:
-          // adapter: require('responsive-loader/sharp')
-        }
-      });
+			// config.module.rules.unshift({
+      //   test: /\.(jpe?g|png)$/i,
+      //   loader: 'responsive-loader',
+      //   options: {
+      //     // If you want to enable sharp support:
+      //     // adapter: require('responsive-loader/sharp')
+      //   }
+      // });
 			// config.plugins.push(new BundleAnalyzerPlugin({
 			// 	analyzerMode: 'server',
 			// 	analyzerPort: 8888,

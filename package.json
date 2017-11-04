@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "aos": "^2.2.0",
+    "babel-plugin-import-static-files": "^1.0.1",
     "bluebird": "^3.5.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.1.2",
@@ -28,7 +29,7 @@
     "dev": "next -p 4444",
     "build": "next build",
     "start": "next start",
-    "export": "node generatePostHtml.js && next build && next export",
+    "export": "node generatePostHtml.js && next build && next export && npm run cp",
     "cp": "touch out/.nojekyll && rsync -ravpzHogt out/ ./../jeffreyyoung.github.io/",
     "deploy": "s3-website deploy out"
   },
